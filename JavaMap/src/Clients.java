@@ -1,7 +1,14 @@
+/**Написать программу которая в консоли считывает количество пользователей,
+ * затем для каждого пользователя запрашивает login и password,
+ * @version 1.0 05 ноября 2018
+ * @author Наташа Яценя
+ */
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
 public class Clients {
+
     private Clients() {
     }
     public static Map<String, String> map = new HashMap<String, String>();
@@ -12,6 +19,7 @@ public class Clients {
         n = Integer.parseInt(input.nextLine());
         return n;
     }
+
     public static void Users(int n) {
         for (int i = 0; i < n; i++) {
             System.out.println("Введите login:");
@@ -21,6 +29,7 @@ public class Clients {
             map.put(user, pass);
         }
     }
+
     public static void Information() {
             System.out.println("Введите login для поиска");
             String login = input.nextLine();
@@ -28,6 +37,7 @@ public class Clients {
             System.out.println("Login - " + login);
             System.out.println("Password - " + pass);
         }
+
     public static void main(final String[] args) {
         int numbers;
         numbers = numberUsers();
